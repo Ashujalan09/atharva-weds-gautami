@@ -1,0 +1,16 @@
+# Local backup of the original single-file build — not part of the site.
+.original/
+
+# The background music is a third-party recording and is deliberately NOT
+# distributed with this repository. Drop your own track at
+# audio/background-music.mp3 to enable the music button; while it is missing the
+# button hides itself automatically.
+audio/*.mp3
+
+# Internal working notes, not part of the published site.
+PROJECT-STATE.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini

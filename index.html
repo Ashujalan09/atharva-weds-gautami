@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3A0E0E">
+<title>Atharva weds Gautami · 24 &amp; 25 November 2026</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mulish:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;600&family=Parisienne&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="envelope-closed lang-en">
+
+<!-- CURSOR -->
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============================================================
+     ENVELOPE LANDING
+     ============================================================ -->
+<div class="envelope-overlay" id="envelopeOverlay" data-cursor-theme="light">
+  <span class="viewport-frame"></span>
+  <span class="corner tl">✦</span>
+  <span class="corner tr">✦</span>
+  <span class="corner bl">✦</span>
+  <span class="corner br">✦</span>
+
+  <div class="envelope-wrap" id="envelopeWrap" role="button" tabindex="0" aria-label="Tap to open the invitation">
+    <div class="envelope" id="envelope">
+      <div class="envelope-body"></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-glow"></div>
+      <div class="wax-seal">
+        <div class="seal-inner">
+          <span class="seal-letter">A</span>
+          <span class="seal-star">✦</span>
+          <span class="seal-letter">G</span>
+        </div>
+      </div>
+    </div>
+    <p class="envelope-prompt" id="envelopePrompt">Tap to open</p>
+  </div>
+
+  <p class="envelope-invocation">|| श्री गणेशाय नमः ||</p>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#hero" class="header-logo">Atharva ✦ Gautami</a>
+    <div class="header-actions">
+      <button class="lang-pill" id="langBtn" aria-label="Change language"><span id="langLabel">EN</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- LANGUAGE SHEET -->
+<div class="bottom-sheet" id="langSheet" hidden>
+  <div class="sheet-backdrop" data-close-sheet></div>
+  <div class="sheet-panel">
+    <div class="sheet-handle"></div>
+    <p class="sheet-title">Choose language</p>
+    <p class="sheet-sub">भाषा चुनें · भाषा निवडा</p>
+    <button class="sheet-option lang-option" data-lang="en"><span class="sheet-check" data-active-lang="en">✓</span> English</button>
+    <button class="sheet-option lang-option" data-lang="hi"><span class="sheet-check" data-active-lang="hi">✓</span> हिंदी</button>
+    <button class="sheet-option lang-option" data-lang="mr"><span class="sheet-check" data-active-lang="mr">✓</span> मराठी</button>
+    <button class="sheet-cancel" data-close-sheet>Cancel</button>
+  </div>
+</div>
+
+<!-- MENU DRAWER -->
+<div class="menu-drawer" id="menuDrawer" hidden>
+  <div class="drawer-backdrop" data-close-drawer></div>
+  <aside class="drawer-panel">
+    <button class="drawer-close" data-close-drawer aria-label="Close menu">✕</button>
+    <p class="drawer-invocation">|| श्री गणेशाय नमः ||</p>
+    <div class="drawer-divider">✦</div>
+    <nav class="drawer-nav">
+      <a href="#hero"       class="drawer-link" data-section="hero"><span>🏠</span><span>Invitation</span></a>
+      <a href="#countdown"  class="drawer-link" data-section="countdown"><span>⏳</span><span>Countdown</span></a>
+      <a href="#invitation" class="drawer-link" data-section="invitation"><span>💌</span><span>Our Invite</span></a>
+      <a href="#couple"     class="drawer-link" data-section="couple"><span>💑</span><span>Atharva &amp; Gautami</span></a>
+      <a href="#events"     class="drawer-link" data-section="events"><span>💍</span><span>Events</span></a>
+      <a href="#venue"      class="drawer-link" data-section="venue"><span>📍</span><span>Venue &amp; Travel</span></a>
+      <a href="#rsvp"       class="drawer-link" data-section="rsvp"><span>✉️</span><span>RSVP</span></a>
+      <a href="#wishes"     class="drawer-link" data-section="wishes"><span>💝</span><span>Blessings &amp; Wishes</span></a>
+      <a href="#gallery"    class="drawer-link" data-section="gallery"><span>📸</span><span>Moments</span></a>
+      <a href="#no-gifts"   class="drawer-link" data-section="no-gifts"><span>✦</span><span>No Gifts, Please</span></a>
+    </nav>
+    <div class="drawer-divider">✦</div>
+    <button class="drawer-hashtag" id="drawerHashtag" type="button">#AtharvaWedsGautami</button>
+  </aside>
+</div>
+
+<main>
+
+<!-- SECTION 2 — HERO -->
+<section class="section-hero" id="hero" data-cursor-theme="light">
+  <div class="mandala"></div>
+  <div class="petals" id="petals"></div>
+  <span class="viewport-frame"></span>
+  <span class="corner tl">✦</span>
+  <span class="corner tr">✦</span>
+  <span class="corner bl">✦</span>
+  <span class="corner br">✦</span>
+
+  <div class="hero-inner">
+    <p class="invocation">|| श्री गणेशाय नमः ||</p>
+    <p class="shubh">✦  Shubh Vivah  ✦</p>
+    <div class="names-block">
+      <h1 class="name">Atharva</h1>
+      <div class="weds-row">
+        <span class="weds-line"></span>
+        <span class="weds">weds</span>
+        <span class="weds-line"></span>
+      </div>
+      <h1 class="name">Gautami</h1>
+    </div>
+    <div class="meta">
+      <p class="date">24 &amp; 25 November 2026</p>
+      <p class="location">Ujjain, Madhya Pradesh</p>
+    </div>
+    <div class="hero-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+
+  <a href="#countdown" class="scroll-cue">
+    <span class="scroll-text">Scroll</span>
+    <span class="scroll-line"></span>
+  </a>
+
+  <span class="stage-label">Section 2 · Hero</span>
+</section>
+
+<!-- SECTION 3 — COUNTDOWN -->
+<section class="section-countdown" id="countdown" data-cursor-theme="dark">
+  <div class="countdown-inner">
+    <p class="section-label">The Celebration Begins In</p>
+    <h2 class="section-title">Countdown to the Wedding</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <div class="grid">
+      <div class="box"><span class="num" id="cdDays">--</span><span class="cd-label">Days</span></div>
+      <div class="box"><span class="num" id="cdHours">--</span><span class="cd-label">Hours</span></div>
+      <div class="box"><span class="num" id="cdMins">--</span><span class="cd-label">Minutes</span></div>
+      <div class="box"><span class="num" id="cdSecs">--</span><span class="cd-label">Seconds</span></div>
+    </div>
+    <p class="tagline">"Two families, one sacred bond —<br>counting every moment until we celebrate."</p>
+    <div class="bottom-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 3 · Countdown</span>
+</section>
+
+<!-- SECTION 4 — INVITATION -->
+<section class="section-invitation" id="invitation" data-cursor-theme="dark">
+  <div class="invitation-inner">
+    <div class="inv-card">
+      <span class="inv-card-corner tl">✦</span>
+      <span class="inv-card-corner tr">✦</span>
+      <span class="inv-card-corner bl">✦</span>
+      <span class="inv-card-corner br">✦</span>
+      <p class="inv-invocation">|| श्री गणेशाय नमः ||</p>
+      <p class="inv-label">With the blessings of our families</p>
+      <p class="inv-line">You are cordially invited to the</p>
+      <p class="inv-line">beautiful ceremony of us</p>
+      <p class="amp">&amp;</p>
+      <p class="inv-line">We solicit your gracious presence</p>
+      <p class="inv-line">with family on the auspicious occasions</p>
+      <div class="inv-ornament">
+        <span class="ornament-line"></span>
+        <span class="ornament-mark">✦</span>
+        <span class="ornament-line"></span>
+      </div>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 4 · Invitation</span>
+</section>
+
+<!-- SECTION 5 — COUPLE -->
+<section class="section-couple" id="couple" data-cursor-theme="dark">
+  <div class="couple-inner">
+    <p class="section-label">With joy in our hearts</p>
+    <h2 class="section-title">Atharva &amp; Gautami</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <div class="couple-grid">
+      <article class="person">
+        <div class="portrait">
+          <span class="portrait-corner tl">✦</span><span class="portrait-corner tr">✦</span>
+          <span class="portrait-corner bl">✦</span><span class="portrait-corner br">✦</span>
+          <span class="portrait-initial">A</span>
+        </div>
+        <h3 class="person-name">Atharva</h3>
+        <div class="person-ornament"><span class="person-ornament-line"></span><span class="person-ornament-mark">✦</span><span class="person-ornament-line"></span></div>
+        <p class="person-label">Son of</p>
+        <p class="person-parents">Mrs. Mrunalini &amp;<br>Mr. Santosh Arvind Chikte</p>
+      </article>
+      <div class="couple-divider">
+        <span class="couple-divider-line"></span>
+        <span class="couple-divider-mark">&amp;</span>
+        <span class="couple-divider-line"></span>
+      </div>
+      <article class="person">
+        <div class="portrait">
+          <span class="portrait-corner tl">✦</span><span class="portrait-corner tr">✦</span>
+          <span class="portrait-corner bl">✦</span><span class="portrait-corner br">✦</span>
+          <span class="portrait-initial">G</span>
+        </div>
+        <h3 class="person-name">Gautami</h3>
+        <div class="person-ornament"><span class="person-ornament-line"></span><span class="person-ornament-mark">✦</span><span class="person-ornament-line"></span></div>
+        <p class="person-label">Daughter of</p>
+        <p class="person-parents">Mrs. Sonal &amp;<br>Mr. Vinay Arvind Naik</p>
+      </article>
+    </div>
+    <div class="bottom-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 5 · Couple</span>
+</section>
+
+<!-- SECTION 6 — EVENTS -->
+<section class="section-events" id="events" data-cursor-theme="dark">
+  <div class="events-inner">
+    <p class="section-label">We invite you to join us at</p>
+    <h2 class="section-title">Wedding Ceremonies</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <div class="events-grid">
+      <article class="event-card">
+        <span class="event-corner tl">✦</span><span class="event-corner tr">✦</span>
+        <span class="event-corner bl">✦</span><span class="event-corner br">✦</span>
+        <div class="event-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="30" r="11"/><path d="M19 21 L19 17"/><path d="M29 21 L29 17"/>
+            <path d="M24 10 L18.5 15 L24 20 L29.5 15 Z"/><path d="M24 10 L24 20"/><path d="M18.5 15 L29.5 15"/>
+          </svg>
+        </div>
+        <h3 class="event-name">Engagement</h3>
+        <div class="event-ornament"><span class="ornament-line"></span><span class="ornament-mark">✦</span><span class="ornament-line"></span></div>
+        <p class="event-date">24th November 2026</p>
+        <p class="event-time">Tuesday · 5:00 PM</p>
+        <p class="event-venue">Ratnapriya Hotel &amp; Resort<br>Indore–Ujjain Road, Ujjain (M.P.)</p>
+        <div class="event-actions">
+          <button class="btn btn-sweep" type="button" data-calendar="engagement">Add to Calendar</button>
+          <a class="btn btn-underline" data-directions href="https://www.google.com/maps/dir/?api=1&amp;destination=Ratnapriya%20Hotel%20%26%20Resort%2C%20Indore-Ujjain%20Road%2C%20Ujjain%2C%20Madhya%20Pradesh&amp;travelmode=driving" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </article>
+      <article class="event-card">
+        <span class="event-corner tl">✦</span><span class="event-corner tr">✦</span>
+        <span class="event-corner bl">✦</span><span class="event-corner br">✦</span>
+        <div class="event-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 24 C16 12, 4 14, 6 22 C8 30, 18 28, 24 24"/>
+            <path d="M24 24 C32 12, 44 14, 42 22 C40 30, 30 28, 24 24"/>
+            <circle cx="24" cy="24" r="2.2"/>
+            <path d="M23 25.5 C20 30, 16 34, 14 40"/><path d="M25 25.5 C28 30, 32 34, 34 40"/>
+          </svg>
+        </div>
+        <h3 class="event-name">Wedding</h3>
+        <div class="event-ornament"><span class="ornament-line"></span><span class="ornament-mark">✦</span><span class="ornament-line"></span></div>
+        <p class="event-date">25th November 2026</p>
+        <p class="event-time">Wednesday · 11:26 AM (Muhurat)</p>
+        <p class="event-venue">Ratnapriya Hotel &amp; Resort<br>Indore–Ujjain Road, Ujjain (M.P.)</p>
+        <div class="event-actions">
+          <button class="btn btn-sweep" type="button" data-calendar="wedding">Add to Calendar</button>
+          <a class="btn btn-underline" data-directions href="https://www.google.com/maps/dir/?api=1&amp;destination=Ratnapriya%20Hotel%20%26%20Resort%2C%20Indore-Ujjain%20Road%2C%20Ujjain%2C%20Madhya%20Pradesh&amp;travelmode=driving" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </article>
+    </div>
+    <div class="bottom-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 6 · Events</span>
+</section>
+
+<!-- SECTION 7 — VENUE -->
+<section class="section-venue" id="venue" data-cursor-theme="dark">
+  <div class="venue-inner">
+    <p class="section-label">Join us at</p>
+    <h2 class="section-title">Venue &amp; Travel</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <div class="map-card">
+      <span class="map-corner tl">✦</span><span class="map-corner tr">✦</span>
+      <span class="map-corner bl">✦</span><span class="map-corner br">✦</span>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Ratnapriya+Hotel+Resort+Indore+Ujjain+Road+Ujjain&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Venue map"></iframe>
+      </div>
+    </div>
+    <h3 class="venue-name">Ratnapriya Hotel &amp; Resort</h3>
+    <p class="venue-address">Indore–Ujjain Road, Ujjain (M.P.)</p>
+    <div class="info-list">
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="info-text"><strong>Contact</strong><a href="tel:8319772196">+91 83197 72196</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+        <div class="info-text"><strong>Nearest Airport</strong>Devi Ahilyabai Holkar Airport (IDR), Indore — approx. 55 km</div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16"/><circle cx="9" cy="14" r="0.8" fill="currentColor"/><circle cx="15" cy="14" r="0.8" fill="currentColor"/><path d="M7 21l2-4"/><path d="M17 21l-2-4"/></svg></div>
+        <div class="info-text"><strong>Nearest Railway</strong>Ujjain Junction — approx. 12 km</div>
+      </div>
+    </div>
+    <a class="btn-directions" data-directions href="https://www.google.com/maps/dir/?api=1&amp;destination=Ratnapriya%20Hotel%20%26%20Resort%2C%20Indore-Ujjain%20Road%2C%20Ujjain%2C%20Madhya%20Pradesh&amp;travelmode=driving" target="_blank" rel="noopener">
+      <span>Get Directions</span>
+      <span class="arrow">→</span>
+    </a>
+    <div class="bottom-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 7 · Venue &amp; Travel</span>
+</section>
+
+<!-- SECTION 8 — RSVP -->
+<section class="section-rsvp" id="rsvp" data-cursor-theme="light">
+  <span class="viewport-frame"></span>
+  <span class="corner tl">✦</span><span class="corner tr">✦</span>
+  <span class="corner bl">✦</span><span class="corner br">✦</span>
+
+  <div class="rsvp-inner">
+    <p class="section-label">Kindly Respond</p>
+    <h2 class="section-title">RSVP</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+
+    <form class="rsvp-card" id="rsvpForm" novalidate>
+      <span class="rsvp-corner tl">✦</span><span class="rsvp-corner tr">✦</span>
+      <span class="rsvp-corner bl">✦</span><span class="rsvp-corner br">✦</span>
+
+      <div class="rsvp-form">
+        <label class="field">
+          <span class="field-label">Your Name</span>
+          <input type="text" name="name" placeholder="e.g. Ashutosh Jalan" required>
+        </label>
+
+        <label class="field">
+          <span class="field-label">Email / Phone</span>
+          <input type="text" name="contact" placeholder="How can we reach you?" required>
+        </label>
+
+        <fieldset class="fieldset">
+          <legend>Will you attend?</legend>
+          <div class="radio-row">
+            <label class="radio"><input type="radio" name="attending" value="yes" required> <span>Yes, with joy</span></label>
+            <label class="radio"><input type="radio" name="attending" value="no"> <span>Sadly, no</span></label>
+          </div>
+        </fieldset>
+
+        <div class="swap-wrap" id="swapYes" aria-hidden="true">
+          <div class="swap-inner"><div class="swap-content">
+            <label class="field">
+              <span class="field-label">Number of Guests</span>
+              <select name="guests">
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option><option value="6">6</option>
+              </select>
+            </label>
+            <fieldset class="fieldset">
+              <legend>Meal Preference</legend>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="meal" value="veg" checked> <span>Veg</span></label>
+                <label class="radio"><input type="radio" name="meal" value="jain"> <span>Jain</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Which events will you join?</legend>
+              <div class="check-row">
+                <label class="check"><input type="checkbox" name="events" value="engagement" checked> <span>Engagement</span></label>
+                <label class="check"><input type="checkbox" name="events" value="wedding" checked> <span>Wedding</span></label>
+              </div>
+            </fieldset>
+          </div></div>
+        </div>
+
+        <div class="swap-wrap" id="swapNo" aria-hidden="true">
+          <div class="swap-inner"><div class="swap-content">
+            <p class="attending-no-note">You'll be dearly missed. Send the couple your love and blessings.</p>
+            <label class="field">
+              <span class="field-label">Your Wish for the Couple</span>
+              <textarea name="blessing" placeholder="Wishing you a lifetime of joy and togetherness…" rows="4"></textarea>
+            </label>
+          </div></div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Send RSVP</button>
+      </div>
+    </form>
+
+    <div class="rsvp-success" id="rsvpSuccess" hidden>
+      <span class="rsvp-corner tl">✦</span><span class="rsvp-corner tr">✦</span>
+      <span class="rsvp-corner bl">✦</span><span class="rsvp-corner br">✦</span>
+      <p class="success-icon" id="successIcon">🙏</p>
+      <h3 class="success-title" id="successTitle">Thank You</h3>
+      <div class="success-ornament">
+        <span class="success-ornament-line"></span>
+        <span class="success-ornament-mark">✦</span>
+        <span class="success-ornament-line"></span>
+      </div>
+      <p class="success-msg" id="successMsg">Your RSVP has been received.<br>We can't wait to celebrate with you.</p>
+      <div class="success-actions" id="successActions">
+        <button type="button" class="btn-outline" data-calendar="both">Add to Calendar</button>
+        <a href="#wishes" class="btn-outline">Leave a Blessing</a>
+      </div>
+    </div>
+  </div>
+  <span class="stage-label">Section 8 · RSVP</span>
+</section>
+
+<!-- SECTION 9 — WISHES -->
+<section class="section-wishes" id="wishes" data-cursor-theme="dark">
+  <div class="wishes-inner">
+    <p class="section-label">Leave Your Blessings</p>
+    <h2 class="section-title">Blessings &amp; Wishes</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <p class="sub">"Shower your love and blessings upon the couple —<br>every word will be treasured."</p>
+
+    <form class="wish-form" id="wishForm" novalidate>
+      <span class="form-corner tl">✦</span><span class="form-corner tr">✦</span>
+      <span class="form-corner bl">✦</span><span class="form-corner br">✦</span>
+      <div class="form-inner" id="wishFormInner">
+        <label class="field">
+          <span class="field-label">Your Name</span>
+          <input type="text" name="name" placeholder="e.g. Ashutosh Jalan" required>
+        </label>
+        <label class="field">
+          <span class="field-label">Your Relation (optional)</span>
+          <input type="text" name="relation" placeholder="e.g. Friend of the groom">
+        </label>
+        <label class="field">
+          <span class="field-label">Your Wish for the Couple</span>
+          <textarea name="message" placeholder="Write your blessing in English, हिंदी, or मराठी…" rows="3" required></textarea>
+        </label>
+        <button type="submit" class="btn-submit">Send Your Blessings</button>
+      </div>
+    </form>
+
+    <p class="wall-label">From Their Loved Ones</p>
+    <h3 class="wall-title">Wishes Wall</h3>
+
+    <div class="wishes-list" id="wishesList">
+      <article class="wish-card">
+        <p class="wish-msg">Wishing you a lifetime of love and laughter. May your home always be filled with joy.</p>
+        <div class="wish-footer">
+          <div>
+            <p class="wish-author"><span class="dash">—</span>Priya &amp; Family</p>
+            <p class="wish-relation">Cousin of the bride</p>
+          </div>
+          <button class="wish-love" type="button"><span class="heart">♥</span><span class="count">24</span></button>
+        </div>
+      </article>
+
+      <article class="wish-card">
+        <p class="wish-msg">अथर्व आणि गौतमी, तुमचं नातं असंच सुंदर राहो. देव तुम्हाला आशीर्वाद देवो.</p>
+        <div class="wish-footer">
+          <div>
+            <p class="wish-author"><span class="dash">—</span>Sneha Kulkarni</p>
+            <p class="wish-relation">College friend</p>
+          </div>
+          <button class="wish-love" type="button"><span class="heart">♥</span><span class="count">18</span></button>
+        </div>
+      </article>
+
+      <article class="wish-card">
+        <p class="wish-msg">Atharva &amp; Gautami, you are made for each other. Blessings from the Kulkarni family.</p>
+        <div class="wish-footer">
+          <div>
+            <p class="wish-author"><span class="dash">—</span>Kulkarni Family</p>
+            <p class="wish-relation">Neighbours</p>
+          </div>
+          <button class="wish-love" type="button"><span class="heart">♥</span><span class="count">12</span></button>
+        </div>
+      </article>
+
+      <article class="wish-card">
+        <p class="wish-msg">May your journey together be as beautiful as the day you met. Congratulations!</p>
+        <div class="wish-footer">
+          <div>
+            <p class="wish-author"><span class="dash">—</span>Rahul Deshmukh</p>
+            <p class="wish-relation">Friend of the groom</p>
+          </div>
+          <button class="wish-love" type="button"><span class="heart">♥</span><span class="count">9</span></button>
+        </div>
+      </article>
+    </div>
+
+    <button class="btn-more" id="moreBtn" type="button">Show More Wishes</button>
+
+    <div class="bottom-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 9 · Wishes</span>
+</section>
+
+<!-- SECTION 10 — GALLERY -->
+<section class="section-gallery" id="gallery" data-cursor-theme="dark">
+  <div class="gallery-inner">
+    <p class="section-label">A Glimpse Into Our Story</p>
+    <h2 class="section-title">Moments</h2>
+    <div class="title-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <p class="sub">Photographs from the journey that brought us here.<br>More to come — see you at the wedding.</p>
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="gallery-tile" data-caption="The day we met" data-index="1"><span class="tile-corner tl">✦</span><span class="tile-corner tr">✦</span><span class="tile-corner bl">✦</span><span class="tile-corner br">✦</span><span class="tile-placeholder"><span class="tile-icon">✦</span><span class="tile-label">Photo coming soon</span></span><span class="tile-overlay"><span class="tile-overlay-text">View</span></span></button>
+      <button class="gallery-tile" data-caption="Our first Diwali together" data-index="2"><span class="tile-corner tl">✦</span><span class="tile-corner tr">✦</span><span class="tile-corner bl">✦</span><span class="tile-corner br">✦</span><span class="tile-placeholder"><span class="tile-icon">✦</span><span class="tile-label">Photo coming soon</span></span><span class="tile-overlay"><span class="tile-overlay-text">View</span></span></button>
+      <button class="gallery-tile" data-caption="Engagement day" data-index="3"><span class="tile-corner tl">✦</span><span class="tile-corner tr">✦</span><span class="tile-corner bl">✦</span><span class="tile-corner br">✦</span><span class="tile-placeholder"><span class="tile-icon">✦</span><span class="tile-label">Photo coming soon</span></span><span class="tile-overlay"><span class="tile-overlay-text">View</span></span></button>
+      <button class="gallery-tile" data-caption="A quiet evening by the lake" data-index="4"><span class="tile-corner tl">✦</span><span class="tile-corner tr">✦</span><span class="tile-corner bl">✦</span><span class="tile-corner br">✦</span><span class="tile-placeholder"><span class="tile-icon">✦</span><span class="tile-label">Photo coming soon</span></span><span class="tile-overlay"><span class="tile-overlay-text">View</span></span></button>
+      <button class="gallery-tile" data-caption="Festival of lights" data-index="5"><span class="tile-corner tl">✦</span><span class="tile-corner tr">✦</span><span class="tile-corner bl">✦</span><span class="tile-corner br">✦</span><span class="tile-placeholder"><span class="tile-icon">✦</span><span class="tile-label">Photo coming soon</span></span><span class="tile-overlay"><span class="tile-overlay-text">View</span></span></button>
+      <button class="gallery-tile" data-caption="Celebrating with family" data-index="6"><span class="tile-corner tl">✦</span><span class="tile-corner tr">✦</span><span class="tile-corner bl">✦</span><span class="tile-corner br">✦</span><span class="tile-placeholder"><span class="tile-icon">✦</span><span class="tile-label">Photo coming soon</span></span><span class="tile-overlay"><span class="tile-overlay-text">View</span></span></button>
+    </div>
+    <div class="bottom-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+  </div>
+  <span class="stage-label dark">Section 10 · Gallery</span>
+</section>
+
+<!-- SECTION 11A — NO GIFTS -->
+<section class="section-nogifts" id="no-gifts" data-cursor-theme="dark">
+  <div class="nogifts-inner">
+    <p class="ng-label">✦  A Humble Request  ✦</p>
+    <h2 class="ng-main">No Gifts, Please.</h2>
+    <div class="ng-ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">✦</span>
+      <span class="ornament-line"></span>
+    </div>
+    <p class="ng-sub">Your presence and best wishes<br>are all we seek.</p>
+  </div>
+  <span class="stage-label dark">Section 11A · No Gifts</span>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footer" data-cursor-theme="light">
+  <span class="footer-frame"></span>
+  <span class="footer-corner tl">✦</span><span class="footer-corner tr">✦</span>
+  <span class="footer-corner bl">✦</span><span class="footer-corner br">✦</span>
+
+  <div class="footer-inner">
+    <p class="footer-couple">Atharva <span class="amp">&amp;</span> Gautami</p>
+
+    <button class="footer-hashtag" id="hashtagBtn" type="button">
+      <span>#AtharvaWedsGautami</span>
+      <span class="copy-icon">⧉</span>
+    </button>
+
+    <p class="footer-phone"><a href="tel:8319772196">📞 +91 83197 72196</a></p>
+
+    <div class="footer-ornament">
+      <span class="footer-ornament-line"></span>
+      <span class="footer-ornament-mark">✦</span>
+      <span class="footer-ornament-line"></span>
+    </div>
+
+    <p class="footer-withlove">With love and blessings,</p>
+    <p class="footer-family">The Chikte &amp; Naik Families</p>
+    <p class="footer-invocation">|| श्री गणेशाय नमः ||</p>
+    <p class="footer-made">Made with ♥ · © 2026</p>
+    <button class="footer-replay" id="replayBtn" type="button">↻ Replay Intro</button>
+  </div>
+
+  <div class="footer-credit">
+    <p class="footer-credit-line">
+      <span class="credit-item"><span>Made with ♥ by</span> <span>Ashutosh Jalan</span></span>
+      <span class="credit-sep" aria-hidden="true"></span>
+      <span class="credit-item"><a href="tel:8120013382">+91 81200 13382</a></span>
+      <span class="credit-sep" aria-hidden="true"></span>
+      <span class="credit-item"><a href="https://ashutoshjalan.com" target="_blank" rel="noopener">ashutoshjalan.com</a></span>
+    </p>
+  </div>
+</footer>
+
+<!-- MUSIC -->
+<button class="music-btn paused" id="musicBtn" aria-label="Toggle music">
+  <span class="music-icon-on" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="8.75" cy="17" rx="2.75" ry="2.15" fill="currentColor"/>
+      <path d="M11.5 17V6.2c0-.5.3-.95.78-1.12l6.3-2.2c.72-.25 1.47.28 1.47 1.04V7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="music-icon-off" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="8.75" cy="17" rx="2.75" ry="2.15" fill="currentColor"/>
+      <path d="M11.5 17V6.2c0-.5.3-.95.78-1.12l6.3-2.2c.72-.25 1.47.28 1.47 1.04V7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Mute slash. Drawn as two strokes: a wider one in the button's own
+           background colour severs the note behind the slash, then the visible
+           gold slash on top. Without the cutout the slash and the stem overlap
+           into a single thick stroke and the note just looks deformed. -->
+      <line x1="20.5" y1="4.6" x2="3.6" y2="19.2" stroke="rgba(74,20,20,0.9)" stroke-width="5.6" stroke-linecap="round"/>
+      <line x1="20.5" y1="4.6" x2="3.6" y2="19.2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/>
+    </svg>
+  </span>
+</button>
+<audio id="bgMusic" loop preload="auto" src="audio/background-music.mp3"></audio>
+
+<!-- CALENDAR SHEET -->
+<div class="bottom-sheet" id="calSheet" hidden>
+  <div class="sheet-backdrop" data-close-sheet></div>
+  <div class="sheet-panel">
+    <div class="sheet-handle"></div>
+    <p class="sheet-title">Add to calendar</p>
+    <p class="sheet-sub" id="calSubtitle"></p>
+    <button class="sheet-option" data-cal="apple"><span>📱</span> <span>Apple Calendar</span></button>
+    <button class="sheet-option" data-cal="google"><span>📱</span> <span>Google Calendar</span></button>
+    <button class="sheet-option" data-cal="ics"><span>📥</span> <span>Download .ics file</span></button>
+    <button class="sheet-cancel" data-close-sheet>Cancel</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Next">›</button>
+  <div class="lightbox-frame">
+    <span class="lb-corner tl">✦</span><span class="lb-corner tr">✦</span>
+    <span class="lb-corner bl">✦</span><span class="lb-corner br">✦</span>
+    <div class="lb-placeholder">
+      <span class="lb-icon">✦</span>
+      <p class="lb-caption" id="lbCaption">Photo coming soon</p>
+      <p class="lb-index" id="lbIndex">1 / 6</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/app.core.js"></script>
+<script src="js/app.sections.js"></script>
+<script src="js/app.effects.js"></script>
+
+</body>
+</html>

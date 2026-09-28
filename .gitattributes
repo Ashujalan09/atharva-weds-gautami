@@ -1,0 +1,8 @@
+# Normalise line endings so the project behaves identically on any machine.
+# Without this, Git's autocrlf rewriting can flip every file's endings on checkout.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp3 binary
+*.ico binary

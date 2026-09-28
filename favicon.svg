@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Favicon: the A ✦ G monogram from the invitation's wax seal,
+     in the site's maroon + gold palette. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="wax" cx="38%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#7A2222"/>
+      <stop offset="62%" stop-color="#5C1818"/>
+      <stop offset="100%" stop-color="#3A0E0E"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF6A"/>
+      <stop offset="100%" stop-color="#8C6E2A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- wax disc -->
+  <circle cx="32" cy="32" r="31" fill="url(#wax)"/>
+  <circle cx="32" cy="32" r="29.5" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.55"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#gold)" stroke-width="0.75"
+          stroke-dasharray="1.6 2.6" opacity="0.5"/>
+
+  <!-- monogram: solid bright gold, not the gradient — the gradient's dark stop
+       loses contrast against the wax at 16px -->
+  <g fill="#D9B26C" font-family="Georgia, 'Times New Roman', serif" font-size="30"
+     font-weight="700" text-anchor="middle">
+    <text x="20.5" y="42">A</text>
+    <text x="43.5" y="42">G</text>
+  </g>
+  <!-- centre star -->
+  <path d="M32 25.6 L33.7 30.3 L38.4 32 L33.7 33.7 L32 38.4 L30.3 33.7 L25.6 32 L30.3 30.3 Z"
+        fill="#D4AF6A"/>
+</svg>
