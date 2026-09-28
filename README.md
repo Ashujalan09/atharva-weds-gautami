@@ -1,10 +1,25 @@
 # Atharva weds Gautami — Wedding Invitation Site
 
+**Live:** https://ashujalan09.github.io/atharva-weds-gautami/
+**Repo:** https://github.com/Ashujalan09/atharva-weds-gautami (public)
+
 A single-page wedding invitation for **24 & 25 November 2026, Ujjain, Madhya Pradesh**.
 No build step, no dependencies — plain HTML, CSS and JavaScript.
 
 The site opens on a "Tap to open" wax-sealed envelope, which lifts to reveal the
 invitation sections.
+
+## Deployment
+
+Hosted on **GitHub Pages**, published by the workflow in
+`.github/workflows/deploy.yml` on every push to `main`.
+
+Pages is configured with `build_type: workflow`, so that file is what actually
+publishes the site. It stages **only** the site files into `_site` — `index.html`,
+`favicon.svg`, `css/`, `js/`, and `audio/` if a track is present. Uploading the repo
+root would have exposed `README.md`, `.gitignore` and `tools/` as public URLs.
+
+To deploy a change, commit and push to `main`; the Actions run takes about a minute.
 
 ## Structure
 
