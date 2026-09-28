@@ -1,0 +1,57 @@
+# Deploys the static site to GitHub Pages on every push to main.
+# Pages for this repo is set to build_type: workflow, so this file is what
+# actually publishes the site. There is no build step — the site is plain
+# HTML/CSS/JS.
+#
+# Only the site files are published. Uploading the whole repo would expose
+# README.md, .gitignore, tools/ and .github/ as public URLs on the site, so the
+# site files are staged into a clean directory first.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Stage only the site files
+        run: |
+          mkdir -p _site
+          cp index.html favicon.svg _site/
+          cp -r css js _site/
+          if [ -f audio/background-music.mp3 ]; then
+            mkdir -p _site/audio
+            cp audio/background-music.mp3 _site/audio/
+          fi
+          echo "Publishing:"
+          find _site -type f | sort
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
